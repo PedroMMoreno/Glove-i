@@ -51,12 +51,14 @@ while True:
     force_sensor = pin2.read_analog()
     if last_force_sensor != force_sensor:
         force_sensor_midi = math.floor(force_sensor / 1024 * 127) 
-        midiControlChange(0, 23, force_sensor_midi)
+        if force_sensor_midi <= 127:
+            midiControlChange(0, 23, force_sensor_midi)
     last_force_sensor = force_sensor
     flex_sensor = pin1.read_analog()
     if last_flex_sensor != flex_sensor:
         flex_sensor_midi = math.floor((flex_sensor / 1024 - 0.9133) / 0.000434) 
-        midiControlChange(0, 24, flex_sensor_midi)
+        if force_sensor_midi <= 127:
+            midiControlChange(0, 24, flex_sensor_midi)
     last_flex_sensor = flex_sensor
     
     a = button_a.is_pressed()
