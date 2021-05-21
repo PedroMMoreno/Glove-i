@@ -38,6 +38,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 601.0, 136.0, 100.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-24",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -277,8 +289,8 @@
 				"name" : "Blue",
 				"default" : 				{
 					"fontsize" : [ 12.0 ],
-					"fontname" : [ "Arial" ],
 					"bgcolor" : [ 0.0, 0.086275, 0.364706, 1.0 ],
+					"fontname" : [ "Arial" ],
 					"accentcolor" : [ 0.27451, 0.760784, 0.827451, 0.45 ]
 				}
 ,
@@ -320,7 +332,6 @@
 , 			{
 				"name" : "cold",
 				"default" : 				{
-					"elementcolor" : [ 0.681193, 0.750541, 0.758255, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -333,11 +344,12 @@
 						"pt2" : [ 0.5, 0.95 ]
 					}
 ,
-					"fontname" : [ "Arial" ],
 					"color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"bgcolor" : [ 0.0, 0.078431, 0.321569, 1.0 ],
 					"patchlinecolor" : [ 0.239216, 0.254902, 0.278431, 0.9 ],
-					"accentcolor" : [ 0.086275, 0.309804, 0.52549, 1.0 ]
+					"fontname" : [ "Arial" ],
+					"accentcolor" : [ 0.086275, 0.309804, 0.52549, 1.0 ],
+					"elementcolor" : [ 0.681193, 0.750541, 0.758255, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
