@@ -57,7 +57,7 @@ while True:
     last_force_sensor = force_sensor
     flex_sensor = pin1.read_analog()
     if last_flex_sensor != flex_sensor:
-        flex_sensor_midi = math.floor((flex_sensor / 1024 - 0.9133) / 0.000434) 
+        flex_sensor_midi = math.floor(flex_sensor / 1024 * 127) 
         if force_sensor_midi < 127:
             midiControlChange(CHANNEL, 24, flex_sensor_midi)
     last_flex_sensor = flex_sensor
@@ -66,10 +66,13 @@ while True:
     b = button_b.is_pressed()
     if a is True and lastA is False:
         midiNoteOn(CHANNEL, BUTTON_A_NOTE, 127)
+        display.show("A")
     if b is True and lastB is False:
         midiNoteOn(CHANNEL, BUTTON_B_NOTE, 127)
+        display.show("B")
     elif b is False and lastB is True:
         midiNoteOff(CHANNEL, BUTTON_B_NOTE, 127)
+        display.clear
    
     lastA = a
     lastB = b
